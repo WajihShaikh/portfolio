@@ -1,8 +1,10 @@
 # 🚀 Wajih Shaikh — Personal Portfolio Website
 
-![Portfolio Banner](assets/image/Banner-img-Wajih%20Shaikh.png)
+<p align="center">
+  <img src="assets/image/Banner-img-Wajih%20Shaikh.png" alt="Portfolio Banner" width="200" />
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-blueviolet?style=for-the-badge&logo=vercel)](https://your-live-demo-link.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-blueviolet?style=for-the-badge&logo=vercel)](https://wajihshaikh.github.io/portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -27,15 +29,7 @@ This is the **personal portfolio website** of Wajih Shaikh — WordPress Develop
 
 ## 🌐 Live Demo
 
-> **Check it out live:** [your-live-demo-link.com](https://your-live-demo-link.com)
-
----
-
-## 📸 Screenshots
-
-| Hero Section | Portfolio Grid | Contact Form |
-|:------------:|:-------------:|:------------:|
-| ![Hero](assets/image/Banner-img-Wajih%20Shaikh.png) | ![Portfolio](assets/image/portfolio-img1.png) | ![Contact](assets/image/message-icon.png) |
+> **Check it out live:** [https://wajihshaikh.github.io/portfolio/](https://wajihshaikh.github.io/portfolio/)
 
 ---
 
