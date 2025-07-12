@@ -1,8 +1,6 @@
 # 🚀 Wajih Shaikh — Personal Portfolio Website
 
-<p align="center">
-  <img src="assets/image/Banner-img-Wajih%20Shaikh.png" alt="Portfolio Banner" width="200" />
-</p>
+<img src="assets/image/Banner-img-Wajih%20Shaikh.png" alt="Portfolio Banner" width="200" />
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-blueviolet?style=for-the-badge&logo=vercel)](https://wajihshaikh.github.io/portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
@@ -79,9 +77,9 @@ contact-form.php         # Contact form backend
 
 ## 🤝 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/wajihshaikh/)
+- [LinkedIn](https://www.linkedin.com/in/wajihshaikh01/)
 - [GitHub](https://github.com/yourusername)
-- [Email](mailto:wajihshaikh@example.com)
+- [Email](mailto:shaikhwajih54@gmail.com)
 
 ---
 
