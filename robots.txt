@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wajihshaikh.github.io/portfolio/sitemap.xml
