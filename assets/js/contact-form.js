@@ -1,6 +1,34 @@
 jQuery(document).ready(function ($) {
 	var $form = jQuery("form#contactpage");
 
+	function showFormResult(message, type) {
+		var $result = jQuery("#form_result");
+		$result.empty().append(jQuery("<span>").addClass("form-" + type).text(message)).show();
+	}
+
+	function showThankYouModal() {
+		var $modal = jQuery("#thankYouModal");
+		if ($modal.length) {
+			$modal.modal("show");
+		}
+	}
+
+	function setSubmitState($submit, isSending) {
+		if (isSending) {
+			$submit.prop("disabled", true).attr("data-original-text", $submit.text()).text("Sending...");
+		} else {
+			var originalText = $submit.attr("data-original-text") || "Submit";
+			$submit.prop("disabled", false).text(originalText).removeAttr("data-original-text");
+		}
+	}
+
+	function handleSuccessfulSubmission($f, $submit, message) {
+		showFormResult(message, "success");
+		$f[0].reset();
+		showThankYouModal();
+		setSubmitState($submit, false);
+	}
+
 	$form.validate({
 		rules: {
 			name: { required: true },
@@ -13,57 +41,55 @@ jQuery(document).ready(function ($) {
 		},
 		submitHandler: function (form) {
 			var $f = jQuery(form);
-			var actionUrl = $f.attr('action') || 'contact-form.php';
-			var isGitHubPages = /github\.io$/i.test(window.location.hostname) || window.location.protocol === 'file:';
+			var actionUrl = $f.attr("action") || "contact-form.php";
+			var isGitHubPages = /github\.io$/i.test(window.location.hostname) || window.location.protocol === "file:";
+			var $submit = $f.find("#submit, button[type='submit']");
 
-			// Disable submit while sending
-			var $submit = jQuery('#submit');
-			$submit.prop('disabled', true);
+			setSubmitState($submit, true);
 
 			if (isGitHubPages) {
-				// Fallback to FormSubmit.co AJAX endpoint for static hosting
-				var endpoint = 'https://formsubmit.co/ajax/shaikhwajih54@gmail.com';
 				jQuery.ajax({
-					method: 'POST',
-					url: endpoint,
-					dataType: 'json',
-					accepts: 'application/json',
+					method: "POST",
+					url: "https://formsubmit.co/ajax/shaikhwajih54@gmail.com",
+					dataType: "json",
+					accepts: "application/json",
 					data: $f.serialize(),
 					success: function (data) {
-						jQuery('#form_result').html('<span class="form-success">Thanks for contacting me! I will get back to you soon.</span>').show();
-						$f[0].reset();
+						var message = data && data.success ? "Thanks for contacting me! I will get back to you soon." : "Your message has been sent successfully. I will get back to you soon.";
+						handleSuccessfulSubmission($f, $submit, message);
 					},
 					error: function () {
-						jQuery('#form_result').html('<span class="form-error">There was an issue sending your message. Please email me at shaikhwajih54@gmail.com</span>').show();
-					},
-					complete: function () {
-						$submit.prop('disabled', false);
+						showFormResult("There was an issue sending your message. Please email me at shaikhwajih54@gmail.com", "error");
+						setSubmitState($submit, false);
 					}
 				});
 			} else {
-				// Server-side PHP handler (for non-static environments)
 				jQuery.ajax({
 					url: actionUrl,
-					type: 'POST',
+					type: "POST",
 					data: $f.serialize(),
 					success: function (response) {
 						var t;
-						try { t = jQuery.parseJSON(response); } catch (err) { t = response; }
-						if (t && t.status === 'Success') {
-							jQuery('#form_result').html('<span class="form-success">' + t.msg + '</span>').show();
-							$f[0].reset();
+						try {
+							t = jQuery.parseJSON(response);
+						} catch (err) {
+							t = response;
+						}
+
+						if (t && t.status === "Success") {
+							handleSuccessfulSubmission($f, $submit, t.msg || "Your message has been sent successfully. I will get back to you soon.");
 						} else {
-							jQuery('#form_result').html('<span class="form-error">' + (t && t.msg ? t.msg : 'There was an error sending your message.') + '</span>').show();
+							showFormResult(t && t.msg ? t.msg : "There was an error sending your message.", "error");
+							setSubmitState($submit, false);
 						}
 					},
 					error: function () {
-						jQuery('#form_result').html('<span class="form-error">There was an issue sending your message. Please email me at shaikhwajih54@gmail.com</span>').show();
-					},
-					complete: function () {
-						$submit.prop('disabled', false);
+						showFormResult("There was an issue sending your message. Please email me at shaikhwajih54@gmail.com", "error");
+						setSubmitState($submit, false);
 					}
 				});
 			}
+
 			return false;
 		}
 	});

@@ -283,6 +283,30 @@ html, body {
     .modal-dialog {
         max-width: 96%;
     }
+    .thank-you-modal .modal-content {
+        padding: 38px 24px 30px;
+        border-radius: 28px;
+    }
+    .thank-you-modal h3 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .thank-you-modal p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .thank-you-icon {
+        width: 72px;
+        height: 72px;
+        font-size: 34px;
+    }
+    .thank-you-actions {
+        flex-direction: column;
+    }
+    .thank-you-primary,
+    .thank-you-secondary {
+        width: 100%;
+    }
     .portfolio-img-title p{
         font-size: 14px;
     }

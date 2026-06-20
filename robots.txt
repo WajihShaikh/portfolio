@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /cgi-bin/
-Disallow: /admin/
-Allow: /assets/
-Allow: /index.html
 
 User-agent: Googlebot
 Allow: /
@@ -11,10 +7,13 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Slurp
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://wajihshaikh.github.io/portfolio/sitemap.xml
-
-# Crawl delay to be respectful
-Crawl-delay: 1
