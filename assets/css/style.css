@@ -1060,6 +1060,11 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
     background: #1d74b1;
     transform: translateY(-8px);
 }
+.footer-social-icon ul li:nth-child(4) a i:hover{
+    background: #1dbf73 !important;
+    color: var(--white-color);
+    transform: translateY(-8px);
+}
 .footer-navbar ul{
     margin-bottom: 36px;
 }
@@ -1544,5 +1549,118 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
 .blog-model-con p{
     margin-bottom: 60px !important;
 }
+
+/***** Experience Section CSS *****/
+.experience-con {
+    background: rgb(242,242,255);
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.experience-con::before {
+    content: "";
+    width: 127px;
+    height: 404px;
+    position: absolute;
+    top: 207px;
+    left: 0;
+    background: url(../image/circle-bg-left-img.png) no-repeat top left;
+    animation: right-mover 1s infinite alternate;
+    -webkit-animation: right-mover 1s infinite alternate;
+}
+
+.experience-con::after {
+    content: "";
+    width: 52px;
+    height: 59px;
+    position: absolute;
+    top: 154px;
+    left: 72px;
+    background: url(../image/half-circle-left-icon.png) no-repeat top left;
+    animation: mover 1s infinite alternate;
+    -webkit-animation: mover 1s infinite alternate;
+}
+
+.experience-inner-con {
+    position: relative;
+    z-index: 1;
+}
+
+.experience-inner-con::after {
+    content: "";
+    width: 35px;
+    height: 38px;
+    position: absolute;
+    bottom: 190px;
+    right: -116px;
+    background: url(../image/corn-left-icon.png) no-repeat top left;
+    animation: mover 1s infinite alternate;
+    -webkit-animation: mover 1s infinite alternate;
+}
+
+.experience-item {
+    background: #fff;
+    border: 1px solid transparent;
+    padding: 40px 36px;
+    border-radius: 20px;
+    box-shadow: 0 0 85px 0 #e9eefc;
+    transition-duration: 0.3s;
+    transition-property: transform, border-color;
+    transition-timing-function: ease-out;
+}
+
+.experience-item:hover {
+    border-color: var(--light-purple-color);
+    transform: translateY(-8px);
+}
+
+.experience-item h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.experience-item h5 {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-item ul li {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--light-purple-color);
+    font-weight: bold;
+}
+
+.experience-item:hover h4 {
+    color: var(--light-purple-color);
+}
+
+/***** Experience Section CSS End *****/
 
 
