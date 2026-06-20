@@ -57,21 +57,21 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
     overflow: hidden;
 }
 .header-con{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .header-con .nav-item{
-    padding: 0 18px;
-    font-size: 20px;
+    padding: 0 12px;
+    font-size: 16px;
 }
 .banner-main-con{
-    padding-top: 20px;
+    padding-top: 10px;
 }
 .banner-main-con2 {
-    padding-top: 130px;
+    padding-top: 80px;
 }
 .navbar-nav .nav-item:last-child{
-    padding-right: 50px;
+    padding-right: 20px;
 }
 .header-con .nav-item a:hover{
     color: var(--accent) !important;
@@ -1434,7 +1434,6 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
     font-weight: 400;
   }
  .dynamic-txts{
-    height: 88px;
     overflow: hidden;
     margin: 0;
     display: inline-block;
