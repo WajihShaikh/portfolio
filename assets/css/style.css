@@ -1630,8 +1630,8 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
     }
   }
   .dynamic-txts li h1{
-    position: relative;
-    font-size: 59px;
+  position: relative;
+    font-size: 55px;
   }
   .footer-social-icon ul {
     display: flex;

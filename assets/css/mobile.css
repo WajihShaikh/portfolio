@@ -836,8 +836,13 @@ html, body {
         line-height: 20px;
     }
     .dynamic-txts {
-        height: 48px;
+        height: 108px;
     }
+     .dynamic-txts li h1{
+  position: relative;
+    font-size: 55px;
+    margin: 10px 0;
+  }
     .blog-content{
         padding: 18px 15px;
         text-align: center;
