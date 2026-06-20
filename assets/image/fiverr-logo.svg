@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fiverr official color background -->
+  <circle cx="100" cy="100" r="100" fill="#1DBF73"/>
+  
+  <!-- Fiverr official "f" icon in white -->
+  <path d="M70 60C70 54.477 74.477 50 80 50C85.523 50 90 54.477 90 60V140C90 145.523 85.523 150 80 150C74.477 150 70 145.523 70 140V60Z" fill="white"/>
+  <path d="M100 80C100 74.477 104.477 70 110 70L130 70C135.523 70 140 74.477 140 80C140 85.523 135.523 90 130 90L120 90L120 140C120 145.523 115.523 150 110 150C104.477 150 100 145.523 100 140V80Z" fill="white"/>
+</svg>

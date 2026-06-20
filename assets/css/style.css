@@ -1065,6 +1065,13 @@ background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 1
     color: var(--white-color);
     transform: translateY(-8px);
 }
+.footer-social-icon ul li:nth-child(4) a img{
+    transition: all 0.3s ease-out;
+}
+.footer-social-icon ul li:nth-child(4) a:hover img{
+    transform: translateY(-8px);
+    filter: brightness(1.1);
+}
 .footer-navbar ul{
     margin-bottom: 36px;
 }
