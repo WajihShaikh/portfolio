@@ -351,6 +351,72 @@
             </div>
          </div>
       </section>
+      <!-- experience section -->
+      <section class="w-100 float-left experience-con padding-top padding-bottom position-relative" id="experience">
+         <div class="container">
+            <div class="generic-title text-center">
+               <h6>Experience</h6>
+               <h2 class="mb-0">Professional Experience</h2>
+            </div>
+            <div class="experience-inner-con position-relative">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="experience-item mb-4">
+                        <h4>WordPress Developer</h4>
+                        <h5>GoAccelovate | Remote | Mar 2025 – Present</h5>
+                        <ul>
+                           <li>Promoted from part-time contractor to full-time WordPress Developer after consistently delivering remote client website builds, front-end implementation, and ongoing project updates.</li>
+                           <li>Engineered custom WordPress themes and plugins for 10+ active client projects, reducing average delivery time by 20%.</li>
+                           <li>Optimized 5+ websites to reach 90+ Google PageSpeed scores through caching, lazy loading, and CDN integration.</li>
+                           <li>Integrated REST APIs and third-party services to expand e-commerce and SaaS functionality.</li>
+                           <li>Converted Figma designs into pixel-perfect, mobile-responsive WordPress websites with zero cross-browser issues.</li>
+                        </ul>
+                     </div>
+                     <div class="experience-item mb-4">
+                        <h4>Senior WordPress Developer — Contract / Project-Based</h4>
+                        <h5>Predawn Solutions | Remote | Feb 2025 – Aug 2025 (7 mos)</h5>
+                        <ul>
+                           <li>Engineered scalable custom themes and plugins for US-based clients, cutting plugin load overhead by 30%.</li>
+                           <li>Performed performance audits and security hardening across 8+ production WordPress environments.</li>
+                        </ul>
+                     </div>
+                     <div class="experience-item mb-4">
+                        <h4>Senior WordPress Developer — Full-Time</h4>
+                        <h5>XemenSolutions | Remote, Edmond, Oklahoma, USA | Nov 2024 – Feb 2025 (4 mos)</h5>
+                        <ul>
+                           <li>Promoted to Senior after completing 150+ WordPress projects with consistent quality benchmarks.</li>
+                           <li>Improved average site performance scores by 35% through code refactoring, image optimization, and caching strategies.</li>
+                           <li>Implemented reusable plugin architectures and advanced theme customizations for enterprise-level US clients.</li>
+                        </ul>
+                     </div>
+                     <div class="experience-item mb-4">
+                        <h4>WordPress Developer — Full-Time</h4>
+                        <h5>XemenSolutions | Remote, United States | May 2024 – Nov 2024 (6 mos)</h5>
+                        <ul>
+                           <li>Built 50+ WordPress websites from scratch, converting Figma/XD designs into fully functional, responsive sites.</li>
+                           <li>Improved site load times by an average of 40% using performance optimization techniques.</li>
+                        </ul>
+                     </div>
+                     <div class="experience-item mb-4">
+                        <h4>Web Designer — Full-Time</h4>
+                        <h5>TAKVerge | On-site, Hyderabad, Sindh, Pakistan | Jun 2023 – Jun 2024 (1 yr 1 mo)</h5>
+                        <ul>
+                           <li>Designed and launched visually compelling websites for clients across retail, hospitality, and services industries.</li>
+                        </ul>
+                     </div>
+                     <div class="experience-item mb-4">
+                        <h4>Freelance WordPress Developer</h4>
+                        <h5>Upwork | Remote | Feb 2022 – Present (4+ yrs)</h5>
+                        <ul>
+                           <li>Completed 80+ freelance WordPress projects for international clients, contributing to 200+ total project completions.</li>
+                           <li>Managed full project lifecycles, including requirements gathering, Figma conversion, development, deployment, and post-launch support.</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!-- skill section -->
       <!-- portfolio section -->
       <section class="w-100 float-left portfolio-con padding-top" id="Portfolio">
@@ -757,19 +823,24 @@
                <div class="footer-social-icon">
                   <ul class="mb-0">
                      <li class="d-inline-block">
-                        <a href="https://github.com/wajihshaikh"><i class="fab fa-github d-flex align-items-center justify-content-center"></i></a>
+                        <a href="https://github.com/wajihshaikh" target="_blank" rel="noopener noreferrer"><i class="fab fa-github d-flex align-items-center justify-content-center"></i></a>
                      </li>
                      <li class="d-inline-block">
-                        <a href="https://www.linkedin.com/in/wajih-shaikh/"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
+                        <a href="https://www.linkedin.com/in/wajih-shaikh/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in d-flex align-items-center justify-content-center"></i></a>
                      </li>
                      <li class="d-inline-block">
-                        <a href="https://wajihshaikh.github.io/"><i class="fas fa-globe d-flex align-items-center justify-content-center"></i></a>
+                        <a href="https://wajihshaikh.github.io/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe d-flex align-items-center justify-content-center"></i></a>
+                     </li>
+                     <li class="d-inline-block">
+                        <a href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener noreferrer">
+                           <img src="assets/image/fiverr.svg" alt="Fiverr" style="width:22px;height:22px;display:inline-block;vertical-align:middle;">
+                        </a>
                      </li>
                   </ul>
                </div>
             </div>
             <div class="copy-right-content text-center">
-               <p class="mb-0">Copyright 2024 Wajih Shaikh | All Rights Reserved.</p>
+               <p class="mb-0">Copyright <span id="currentYear"></span> Wajih Shaikh | All Rights Reserved.</p>
             </div>
          </div>
       </div>
@@ -1229,18 +1300,23 @@ link.addEventListener('click', function() {
 
 });
    </script>
-     <script>
-      function downloadImage() {
-        source = 'assets/image/Wajih-Shaikh-WordPress-Developer-Resume (2).pdf';
-      const fileName = 'Wajih-Shaikh-WordPress-Developer-Resume.pdf';
-      var el = document.createElement("a");
-      el.setAttribute("href", source);
-      el.setAttribute("download", fileName);
-      document.body.appendChild(el);
-      el.click();
-      el.remove();
-      }
-    </script>
+      <script>
+         function downloadImage() {
+            var source = 'assets/image/Wajih_Shaikh_WordPress_Developer_Resume.pdf';
+            var fileName = 'Wajih_Shaikh_WordPress_Developer_Resume.pdf';
+            var el = document.createElement('a');
+            el.setAttribute('href', source);
+            el.setAttribute('download', fileName);
+            document.body.appendChild(el);
+            el.click();
+            el.remove();
+         }
+         // Set dynamic copyright year
+         (function(){
+            var el = document.getElementById('currentYear');
+            if (el) el.textContent = new Date().getFullYear();
+         })();
+      </script>
    <!-- Code injected by live-server -->
 <script>
 	// <![CDATA[  <-- For SVG support
