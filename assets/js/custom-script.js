@@ -1,113 +1,54 @@
-  
-           $(document).ready(function() {
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const menuLinks = document.querySelectorAll(".nav-links a[href^='#']");
+const currentYear = document.querySelector("#current-year");
 
-            var counters = $(".count");
-            var countersQuantity = counters.length;
-            var counter = [];
-            
-            for (i = 0; i < countersQuantity; i++) {
-              counter[i] = parseInt(counters[i].innerHTML);
-            }
-            
-            var count = function(start, value, id) {
-              var localStart = start;
-              setInterval(function() {
-                if (localStart < value) {
-                  localStart++;
-                  counters[id].innerHTML = localStart;
-                }
-              }, 40);
-            }
-            
-            for (j = 0; j < countersQuantity; j++) {
-              count(0, counter[j], j);
-            }
-            });
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear().toString();
+}
 
-
-            
-  $('.count').each(function () {
-         $(this).prop('Counter',0).animate({
-         Counter: $(this).text()
-         }, {
-         duration: 3300,
-         easing: 'swing',
-         step: function (now) {
-             $(this).text(Math.ceil(now));
-    }
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen.toString());
   });
-});
- /*******/
-var move_img = document.getElementById("banner-right-img");
-move_img.addEventListener("mousemove", (e) =>{
-  let x = e.layerX
-  let y = e.layerY
-  move_img.style.transform = `translate(-${x /6}px`;
-})
-/********/
-// UPDATE: I was able to get this working again... Enjoy!
-var cursor = document.querySelector('.cursor');
-var cursorinner = document.querySelector('.cursor2');
-var cur=document.getElementById('banner-right-con');
-var section_element=document.querySelectorAll('.service-box-item');
-section_element.forEach(item=>{
-item.addEventListener('mousemove',function(e){
-  var a = e.clientX;
-  var b = e.clientY;
-  cursor.style.visibility="visible";
-  cursorinner.style.visibility="visible";
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-  cursorinner.style.left = a + 'px';
-  cursorinner.style.top = b + 'px';
-  let x = e.layerX
-  
-  let y = e.layerY
-  //item.style.transform = `rotate(-${x /90}deg`;
-});
 
-item.addEventListener('mouseover',function(e){
-  let x = e.layerX
-  item.style.transform = `rotate(-1deg)`;
-  console.log("rotate" + x);
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
-});
-item.addEventListener('mouseout',function(e){
+const sections = Array.from(document.querySelectorAll("main section[id]"));
+const sectionLinks = new Map(
+  Array.from(document.querySelectorAll(".nav-links a[href^='#']")).map((link) => [
+    link.getAttribute("href").slice(1),
+    link
+  ])
+);
 
-  //console.log("Mouse out");
+if ("IntersectionObserver" in window && sections.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-  cursor.style.visibility="hidden";
+        sectionLinks.forEach((link) => link.removeAttribute("aria-current"));
+        const activeLink = sectionLinks.get(entry.target.id);
+        if (activeLink) {
+          activeLink.setAttribute("aria-current", "true");
+        }
+      });
+    },
+    {
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: 0
+    }
+  );
 
-  cursorinner.style.visibility="hidden";
-
-  let x = e.layerX
-
-  let y = e.layerY
-
-  item.style.transform = 'rotate(0deg)';
-
-});
-
-})
-console.log(section_element.length);
-
-cur.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.visibility="visible";
-  cursorinner.style.visibility="visible";
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-  cursorinner.style.left = x + 'px';
-  cursorinner.style.top = y + 'px';
-});
-cur.addEventListener('mouseover', function(e){
-  cursor.classList.add('cursor');
-  cursorinner.classList.add('cursor2');
-});
-
-cur.addEventListener('mouseout', function(){
-  cursor.style.visibility="hidden";
-  cursorinner.style.visibility="hidden";
-});
-
-
-
+  sections.forEach((section) => observer.observe(section));
+}
