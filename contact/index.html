@@ -26,6 +26,7 @@
 <meta name="twitter:title" content="Contact Wajih Shaikh | WordPress Developer">
 <meta name="twitter:description" content="Discuss a WordPress, WooCommerce, Elementor, redesign or performance project with Wajih Shaikh.">
 <meta name="twitter:image" content="https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg">
+<meta name="twitter:image:alt" content="Wajih Shaikh, Senior WordPress Developer and Web Designer">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://wajihshaikh.github.io/portfolio/#website","url":"https://wajihshaikh.github.io/portfolio/","name":"Wajih Shaikh Portfolio","publisher":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://wajihshaikh.github.io/portfolio/contact/#page","url":"https://wajihshaikh.github.io/portfolio/contact/","name":"Contact Wajih Shaikh","description":"Discuss a WordPress, WooCommerce, Elementor, redesign or performance project with Wajih Shaikh.","inLanguage":"en-US","isPartOf":{"@id":"https://wajihshaikh.github.io/portfolio/#website"},"about":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"dateModified":"2026-10-05","primaryImageOfPage":{"@id":"https://wajihshaikh.github.io/portfolio/contact/#primary-image"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wajihshaikh.github.io/portfolio/"},{"@type":"ListItem","position":2,"name":"Contact Wajih Shaikh","item":"https://wajihshaikh.github.io/portfolio/contact/"}]},{"@type":"Person","@id":"https://wajihshaikh.github.io/portfolio/about/#person","name":"Wajih Shaikh","jobTitle":"Senior WordPress Developer & Web Designer","url":"https://wajihshaikh.github.io/portfolio/about/","image":"https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Sindh","addressCountry":"PK"},"knowsAbout":["WordPress","Elementor Pro","WooCommerce","Custom WordPress Development","Website Performance Optimization","Core Web Vitals","PHP","JavaScript","Front-end development","HTML","CSS","ACF","Custom Post Types","API integrations","Responsive Web Design"],"sameAs":["https://www.linkedin.com/in/wajihshaikh01/","https://github.com/WajihShaikh","https://www.fiverr.com/wajihshaikh01"],"description":"Senior WordPress Developer & Web Designer based in Hyderabad, Sindh, Pakistan, working remotely with international businesses and agencies."},{"@type":"ImageObject","@id":"https://wajihshaikh.github.io/portfolio/contact/#primary-image","contentUrl":"https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg","url":"https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg","width":720,"height":720}]}</script>
 <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
@@ -82,7 +83,7 @@
 </div>
 <div class="contact-person"><img src="../assets/images/wajih-shaikh-wordpress-developer.jpg" alt="" width="47" height="47"><div>You'll work directly with Wajih.<small>Design, frontend &amp; WordPress development.</small></div></div><p class="location-note">I am based in Hyderabad, Pakistan and work remotely with international clients.</p>
 </div>
-<form class="project-form" action="https://formsubmit.co/shaikhwajih54@gmail.com" method="post"><h2 class="form-title">A good project starts here.</h2><p class="form-intro">A few details will help me understand what you need.</p>
+<form class="project-form" data-project-form data-ajax-action="https://formsubmit.co/ajax/shaikhwajih54@gmail.com" action="https://formsubmit.co/shaikhwajih54@gmail.com" method="post" target="_blank" rel="noopener" aria-describedby="form-intro form-privacy"><h2 class="form-title">A good project starts here.</h2><p class="form-intro" id="form-intro">A few details will help me understand what you need.</p>
 <input type="hidden" name="_subject" value="New portfolio project inquiry">
 <input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_template" value="table">
@@ -117,11 +118,23 @@
 <textarea name="message" rows="5" required placeholder="What are you building or improving?" maxlength="8000"></textarea>
 </label>
 <button class="button button-accent" type="submit">Send project details</button>
-<p class="form-note">Your details are sent through FormSubmit to discuss your inquiry. Prefer a direct route? <a href="mailto:shaikhwajih54@gmail.com">Email me</a> or <a href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener">message me on Fiverr</a>.</p>
+<p class="form-status" data-form-status role="status" aria-live="polite" aria-atomic="true"></p>
+<p class="form-note" id="form-privacy">Your details are sent through FormSubmit to discuss your inquiry. Prefer a direct route? <a href="mailto:shaikhwajih54@gmail.com">Email me</a> or <a href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener">message me on Fiverr</a>.</p>
+<noscript><p class="form-note">JavaScript is off. Sending opens FormSubmit verification in a new tab; this portfolio stays open.</p></noscript>
 </form>
 </div>
 </section>
 </main>
+<dialog class="inquiry-dialog" id="inquiry-thanks" aria-labelledby="inquiry-thanks-title" aria-describedby="inquiry-thanks-description">
+<div class="inquiry-dialog-content">
+<span class="inquiry-success-mark" aria-hidden="true">✓</span>
+<p class="eyebrow">A conversation starts here</p>
+<h2 id="inquiry-thanks-title">Thank you for reaching out.</h2>
+<p id="inquiry-thanks-description">Your project details have been submitted. I'll reply to the email address you provided.</p>
+<p class="inquiry-dialog-note">Something to add? <a href="mailto:shaikhwajih54@gmail.com">Email me directly</a>.</p>
+<button class="button button-accent" type="button" data-close-dialog autofocus>Back to the portfolio <span aria-hidden="true">↗</span></button>
+</div>
+</dialog>
 <footer class="site-footer">
 <div class="frame footer-grid">
 <div>
@@ -151,5 +164,6 @@
 </footer>
 <script src="../assets/js/site.js" defer>
 </script>
+<script src="../assets/js/contact.js" defer></script>
 </body>
 </html>

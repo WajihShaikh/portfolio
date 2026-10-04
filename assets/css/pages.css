@@ -116,3 +116,23 @@
 .about-portrait>img{animation:portrait-arrive .85s cubic-bezier(.22,1,.36,1) both}
 @keyframes portrait-arrive{from{translate:0 14px;rotate:-2deg}to{translate:0 0;rotate:0deg}}
 .form-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+/* On-page inquiry states and a native, keyboard-accessible confirmation dialog. */
+.project-form[aria-busy=true]{cursor:progress}
+.project-form :disabled{cursor:wait;opacity:.7}
+.project-form .button:disabled{transform:none}
+.form-status{font-size:13px;line-height:1.7;margin:16px 0 0;color:#405c7e}
+.form-status:empty{display:none}
+.form-status[data-state=error]{padding:14px 16px;border:1px solid #efc4c0;border-radius:10px;background:#fff4f2;color:#8e3028}
+.form-status[data-state=success]{color:#23664e}
+.inquiry-dialog{padding:0;border:1px solid #d6e3f4;border-radius:24px;width:min(480px,calc(100% - 32px));max-height:calc(100dvh - 40px);overflow:auto;background:white;color:var(--ink);box-shadow:0 30px 100px #0614284d}
+.inquiry-dialog::backdrop{background:#09182bbf}
+.inquiry-dialog[open]{animation:section-arrive .25s ease-out both}
+.inquiry-dialog-content{padding:38px}
+.inquiry-success-mark{display:grid;place-items:center;width:58px;height:58px;border-radius:17px;background:#eaf2ff;color:#246be0;font-size:28px;margin-bottom:28px}
+.inquiry-dialog .eyebrow{font-size:10px;margin-bottom:14px}
+.inquiry-dialog h2{font-size:36px;margin-bottom:18px}
+.inquiry-dialog p:not(.eyebrow){font-size:14px;line-height:1.8;color:#526781}
+.inquiry-dialog .inquiry-dialog-note{font-size:12px!important;margin:0 0 25px}
+.inquiry-dialog a{text-decoration:underline;text-underline-offset:3px;color:#246be0}
+.inquiry-dialog .button{width:100%}
+@media(max-width:430px){.inquiry-dialog-content{padding:28px 24px}.inquiry-dialog h2{font-size:30px}.inquiry-success-mark{margin-bottom:22px}}

@@ -37,7 +37,8 @@ assets/
   css/site.css         Shared foundations, navigation and controls
   css/home.css         Homepage compositions and portrait motion
   css/pages.css        Inner pages, reviews and journal layouts
-  js/site.js           Menu, service tabs, validation and one-shot reveals
+  js/site.js           Menu, service tabs and one-shot reveals
+  js/contact.js        On-page submission, validation and confirmation dialog
   js/reviews.js        Homepage-only review slider
   fonts/               Cal Sans WOFF2 and its license
   icons/               Local technology and Fiverr marks
@@ -59,18 +60,20 @@ If the domain/base changes, update canonicals, Open Graph URLs, JSON-LD IDs/URLs
 
 ## Contact form
 
-The form sends a native HTTPS POST to FormSubmit for **shaikhwajih54@gmail.com**. It retains CAPTCHA, includes a honeypot, uses named fields and checks required/email/URL inputs. JavaScript additionally rejects whitespace-only name/message values and guards against repeat clicks.
+With JavaScript enabled, the form sends a JSON HTTPS POST to FormSubmit's documented AJAX endpoint for **shaikhwajih54@gmail.com**, without navigating away. It includes a honeypot, named fields and required/email/URL validation. The script rejects whitespace-only name/message values, locks controls while sending, prevents duplicate clicks and times out after 25 seconds without retrying automatically.
 
-No API key or email password belongs in this repository. The form still works without JavaScript. FormSubmit handles verification and its confirmation screen; the website does not claim that an email was delivered before the service responds.
+The native accessible thank-you dialog opens only after an HTTP success and an explicit JSON acceptance (`success: true` or `"true"`). Rejections, malformed responses, network problems and recipient-activation responses retain the inquiry and show an inline message. Acceptance is not a guarantee of inbox delivery. Escape and the close button return focus to the submit button; browsers without dialog support still receive an inline confirmation.
+
+No API key or email password belongs in this repository. Without JavaScript, the original native POST opens FormSubmit in a separate tab and keeps the portfolio open. `_captcha=true` remains in the payload/fallback, but an embedded CAPTCHA is not claimed for AJAX. Anti-spam/verification behavior is controlled by FormSubmit; if verification is required, visitors see an error and can email directly. No CAPTCHA is bypassed. FormSubmit does not support autoresponse emails for AJAX forms; none is promised.
 
 For delivery verification:
 
-1. Test the deployed HTTP/HTTPS form in a normal browser.
+1. Test the deployed HTTP/HTTPS form in a normal browser; confirm that you stay on the page and receive the dialog only after service acceptance.
 2. Complete the CAPTCHA and activate the recipient if FormSubmit sends an activation email.
 3. Confirm receipt in the inbox and spam folder.
 4. Use the visible direct-email or Fiverr link if the third-party service is unavailable.
 
-An attempted local test on 5 October 2026 encountered an in-app-browser network error before a service confirmation. Inbox delivery remains unverified. See [FormSubmit documentation](https://formsubmit.co/) for service setup.
+An earlier native test on 5 October 2026 encountered an in-app-browser network error. The AJAX implementation has been tested with simulated success/error/activation/timeout responses only; no additional real test was sent because the owner chose to verify delivery himself. Inbox delivery remains unverified. See [FormSubmit AJAX documentation](https://formsubmit.co/ajax-documentation) and [service documentation](https://formsubmit.co/documentation) for setup.
 
 ## Editing and checks
 

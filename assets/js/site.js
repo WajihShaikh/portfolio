@@ -56,28 +56,6 @@
     });
   });
 
-  const inquiryForm = document.querySelector(".project-form");
-  if (inquiryForm) {
-    const textFields = ["name", "message"].map(name => inquiryForm.elements.namedItem(name));
-    textFields.forEach(field => field.addEventListener("input", () => field.setCustomValidity("")));
-    const submit = inquiryForm.querySelector("button[type=submit]");
-    const submitLabel = submit.textContent;
-    inquiryForm.addEventListener("submit", event => {
-      textFields.forEach(field => field.setCustomValidity(field.value.trim() ? "" : "Please enter this detail, not just spaces."));
-      if (!inquiryForm.checkValidity()) {
-        event.preventDefault();
-        inquiryForm.reportValidity();
-        return;
-      }
-      // Keep the native POST and CAPTCHA. Never show a fake delivery confirmation.
-      submit.disabled = true;
-      submit.textContent = "Continue to verification…";
-    });
-    window.addEventListener("pageshow", () => {
-      submit.disabled = false;
-      submit.textContent = submitLabel;
-    });
-  }
 
   // One-shot, progressive motion. Content stays visible if JS or an observer fails.
   const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
