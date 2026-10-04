@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I approach a WordPress performance audit | Wajih Shaikh</title>
+<meta name="description" content="A practical order of operations for finding WordPress speed problems without blindly adding optimization plugins.">
+<meta name="author" content="Wajih Shaikh">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#07101f">
+<link rel="canonical" href="https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="preload" href="../../assets/fonts/CalSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I approach a WordPress performance audit | Wajih Shaikh">
+<meta property="og:description" content="A practical order of operations for finding WordPress speed problems without blindly adding optimization plugins.">
+<meta property="og:url" content="https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/">
+<meta property="og:image" content="https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-performance-audit.jpg">
+<meta property="og:image:alt" content="Editorial illustration of a speedometer and layered browser panels">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Wajih Shaikh">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How I approach a WordPress performance audit | Wajih Shaikh">
+<meta name="twitter:description" content="A practical order of operations for finding WordPress speed problems without blindly adding optimization plugins.">
+<meta name="twitter:image" content="https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-performance-audit.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://wajihshaikh.github.io/portfolio/#website","url":"https://wajihshaikh.github.io/portfolio/","name":"Wajih Shaikh Portfolio","publisher":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"inLanguage":"en-US"},{"@type":"Article","@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#article","headline":"How I approach a WordPress performance audit","description":"A practical order of operations for finding WordPress speed problems without blindly adding optimization plugins.","datePublished":"2026-10-05","dateModified":"2026-10-05","author":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"mainEntityOfPage":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#page"},"image":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#primary-image"},"inLanguage":"en-US","publisher":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"about":["WordPress performance","Core Web Vitals"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wajihshaikh.github.io/portfolio/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://wajihshaikh.github.io/portfolio/blog/"},{"@type":"ListItem","position":3,"name":"How I approach a WordPress performance audit","item":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/"}]},{"@type":"Person","@id":"https://wajihshaikh.github.io/portfolio/about/#person","name":"Wajih Shaikh","jobTitle":"Senior WordPress Developer & Web Designer","url":"https://wajihshaikh.github.io/portfolio/about/","image":"https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Sindh","addressCountry":"PK"},"knowsAbout":["WordPress","Elementor Pro","WooCommerce","Custom WordPress Development","Website Performance Optimization","Core Web Vitals","PHP","JavaScript","Front-end development","HTML","CSS","ACF","Custom Post Types","API integrations","Responsive Web Design"],"sameAs":["https://www.linkedin.com/in/wajihshaikh01/","https://github.com/WajihShaikh","https://www.fiverr.com/wajihshaikh01"],"description":"Senior WordPress Developer & Web Designer based in Hyderabad, Sindh, Pakistan, working remotely with international businesses and agencies."},{"@type":"WebPage","@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#page","url":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/","name":"How I approach a WordPress performance audit | Wajih Shaikh","isPartOf":{"@id":"https://wajihshaikh.github.io/portfolio/#website"},"about":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"inLanguage":"en-US","description":"A practical order of operations for finding WordPress speed problems without blindly adding optimization plugins.","dateModified":"2026-10-05","mainEntity":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#article"},"primaryImageOfPage":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#primary-image"}},{"@type":"ImageObject","@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-performance-audit/#primary-image","contentUrl":"https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-performance-audit.jpg","url":"https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-performance-audit.jpg","width":1200,"height":800}]}</script>
+<link rel="stylesheet" href="../../assets/css/pages.css">
+</head>
+<body class="modern-pages article-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+<div class="frame nav-shell">
+<a class="wordmark" href="../../index.html" aria-label="Wajih Shaikh home">
+<span>Wajih</span>
+<span>Shaikh</span>
+</a>
+<nav class="desktop-nav" aria-label="Primary">
+<a  href="../../case-studies/index.html">Work</a>
+<a  href="../../services/index.html">Services</a>
+<a  href="../../about/index.html">About</a>
+<a aria-current="page" href="../../blog/index.html">Insights</a>
+<a class="nav-fiverr" href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener" aria-label="Hire Wajih Shaikh on Fiverr"><img src="../../assets/icons/fiverr.svg" alt="Fiverr" width="59" height="20"><span aria-hidden="true">↗</span></a>
+<a class="nav-contact" href="../../contact/index.html">Start a project</a>
+</nav>
+<button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-nav">
+<span>Menu</span>
+<i>
+</i>
+</button>
+</div>
+<nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile">
+<a href="../../case-studies/index.html">Work</a>
+<a href="../../services/index.html">Services</a>
+<a href="../../about/index.html">About</a>
+<a href="../../blog/index.html">Insights</a>
+<a class="mobile-fiverr" href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener"><img src="../../assets/icons/fiverr.svg" alt="Fiverr" width="65" height="22"><span>Hire me on Fiverr ↗</span></a>
+<a href="../../contact/index.html">Start a project</a>
+</nav>
+</header>
+<main id="main">
+<article class="article">
+<header class="article-hero">
+<div class="frame article-head"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../blog/index.html">Insights</a><span aria-hidden="true">/</span><span aria-current="page">Article</span></nav>
+<p class="eyebrow">Performance</p><div class="article-meta"><img src="../../assets/images/wajih-shaikh-wordpress-developer.jpg" alt="" width="29" height="29"><span>Wajih Shaikh</span><span aria-hidden="true">/</span><time datetime="2026-10-05">5 October 2026</time></div><h1>How I approach a WordPress performance audit</h1>
+<p>A performance audit is most useful when it identifies why a page is slow, not merely which score is low. This is the sequence I use to separate hosting, theme, plugin, media and third-party problems.</p>
+</div><figure class="article-banner"><img src="../../assets/images/blog/wordpress-performance-audit.jpg" alt="Editorial illustration of a speedometer and layered browser panels" width="1200" height="800" fetchpriority="high"></figure></header>
+<div class="frame article-layout">
+<aside>
+<span>Written by</span>
+<strong>Wajih Shaikh</strong>
+<p>Senior WordPress Developer &amp; Web Designer</p><nav class="article-toc" aria-label="Article contents"><span>In this article</span><a href="#note-1">Start with the page users actually visit</a><a href="#note-2">Separate field data from lab data</a><a href="#note-3">Find the largest cost before changing plugins</a><a href="#note-4">Change one layer at a time</a><a href="#note-5">Verify the result</a></nav></aside>
+<div class="article-prose">
+<div class="article-answer"><p><strong>What should a WordPress speed audit tell you?</strong> Which templates are affected, where the largest costs come from, what to change first and how to check that the website still works. A score alone is not an action plan.</p></div><section id="note-1"><h2>Start with the page users actually visit</h2>
+<p>I test representative templates rather than only the homepage: a service page, product page, archive and any page with forms or embeds. Different templates often have different bottlenecks.</p>
+</section>
+<section id="note-2"><h2>Separate field data from lab data</h2>
+<p>PageSpeed Insights field data describes real Chrome users when enough data exists. Lighthouse is a controlled diagnostic. I use both, but I do not treat a single lab run as proof of the real user experience.</p><div class="reading-table-wrap" tabindex="0" role="region" aria-label="Core Web Vitals targets"><table class="reading-table"><caption>Core Web Vitals: the “good” targets, not results from my projects</caption><thead><tr><th scope="col">Metric</th><th scope="col">What it covers</th><th scope="col">Good target</th></tr></thead><tbody><tr><th scope="row">LCP</th><td>Loading the largest visible content element</td><td>2.5 seconds or less</td></tr><tr><th scope="row">INP</th><td>Responsiveness to user interactions</td><td>200 milliseconds or less</td></tr><tr><th scope="row">CLS</th><td>Unexpected layout movement</td><td>0.1 or less</td></tr></tbody></table></div><p class="source-note">Assess these at the 75th percentile of real visits, with mobile and desktop considered separately. <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Google’s Web Vitals guidance</a> explains the thresholds. If a site lacks enough field data, report that limitation rather than presenting lab scores as field results.</p></section>
+<section id="note-3"><h2>Find the largest cost before changing plugins</h2>
+<p>I review the LCP element, request waterfall, image dimensions, font files, JavaScript execution and layout shifts. The highest-impact issue might be a hero image, a third-party widget or server response time—not the cache plugin.</p>
+</section>
+<section id="note-4"><h2>Change one layer at a time</h2>
+<p>Image delivery, caching, CSS, JavaScript, fonts and hosting are separate layers. Small controlled changes make it possible to confirm what helped and avoid breaking checkout, forms or tracking.</p>
+</section>
+<section id="note-5"><h2>Verify the result</h2>
+<p>I retest the same templates and interactions, check responsive layouts, clear relevant caches and watch for delayed layout shifts. Performance work is complete only when the site still behaves correctly.</p><ol class="reading-checklist"><li><strong>Keep a comparison record</strong>Record the URL, device setup, test conditions and changes made. Compare like with like.</li><li><strong>Try the important interactions</strong>Open the mobile menu, expand content, submit a test form and run a test checkout where applicable.</li><li><strong>Explain what remains</strong>Document third-party costs, hosting limits and any feature trade-offs. Don't promise a score that depends on conditions outside the build.</li></ol><p>For examples of the types of business websites I work on, <a href="../../case-studies/index.html">explore the portfolio</a>. Those showcases are not before-and-after performance benchmarks.</p>
+</section>
+<div class="article-takeaway">
+<strong>The practical takeaway</strong>
+<p>Start with evidence, address the largest bottleneck, then check both the metrics and the business-critical interactions. A faster page that breaks the inquiry form is not an improvement.</p>
+</div><nav class="article-next" aria-label="Related reading"><a href="../../wordpress-speed-optimization/index.html">Explore the relevant service ↗</a><a href="../index.html">More development notes ↗</a></nav></div></div></article>
+<section class="closing">
+<div class="frame closing-grid">
+<p class="eyebrow">Start a conversation</p>
+<h2>Have a WordPress project that needs a clear plan?</h2>
+<div>
+<p>Share the current site, the business goal and what is getting in the way. I’ll reply with a practical next step.</p>
+<a class="button button-light" href="../../contact/index.html">Tell me about the project</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="frame footer-grid">
+<div>
+<a class="footer-name" href="../../index.html">Wajih Shaikh</a>
+<p>Senior WordPress Developer & Web Designer<br>based in Hyderabad, Pakistan.</p>
+</div>
+<div>
+<span class="footer-label">Explore</span>
+<a href="../../services/index.html">Services</a>
+<a href="../../case-studies/index.html">Case studies</a>
+<a href="../../about/index.html">About</a>
+<a href="../../blog/index.html">Insights</a>
+</div>
+<div>
+<span class="footer-label">Connect</span>
+<a href="mailto:shaikhwajih54@gmail.com">shaikhwajih54@gmail.com</a>
+<a href="https://www.linkedin.com/in/wajihshaikh01/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/WajihShaikh" target="_blank" rel="noopener">GitHub</a>
+<a class="footer-fiverr" href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener"><img src="../../assets/icons/fiverr.svg" alt="" width="52" height="18"><span>Hire me on Fiverr ↗</span></a>
+</div>
+</div>
+<div class="frame footer-base">
+<span>© <span data-year>
+</span> Wajih Shaikh</span>
+<span>Remote WordPress development for international clients</span>
+</div>
+</footer>
+<script src="../../assets/js/site.js" defer>
+</script>
+</body>
+</html>

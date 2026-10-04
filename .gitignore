@@ -1,0 +1,24 @@
+# Local preview mirror and editor metadata (not website source).
+/dist/
+/.openai/
+/.codex/
+
+# Local QA evidence, reports and generated previews.
+/docs/
+/REDESIGN_REPORT.md
+/BLOG_IMAGE_ASSETS.md
+/*-preview.jpg
+/tmp/
+/*.log
+/lighthouse*.json
+/lighthouse*.html
+
+# Never commit local credentials or development dependencies.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+node_modules/
+.DS_Store
+Thumbs.db
