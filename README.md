@@ -15,6 +15,7 @@ Pure HTML, CSS and vanilla JavaScript. No framework, package manager, build step
 - 16 supplied Fiverr reviews in a manual, keyboard/touch-friendly slider.
 - Local fonts/icons, responsive layouts and reduced-motion-friendly animation.
 - Per-page metadata, canonical URLs, sitemap and linked JSON-LD entities.
+- The supplied portrait is used as the favicon on every page; no invented or AI-recreated headshot is used.
 
 ## Run locally
 
@@ -57,6 +58,8 @@ For a branch-based GitHub Pages site, select the repository's default branch and
 The `.nojekyll` file keeps this a plain static site. Directory routes must resolve to their `index.html` files. GitHub Pages can use the root `404.html` for missing routes. Test a missing URL at multiple depths after deployment.
 
 If the domain/base changes, update canonicals, Open Graph URLs, JSON-LD IDs/URLs, sitemap, robots sitemap URL and the `404.html` base together. For a project site under `/portfolio/`, effective robots rules belong at the hostname root; this repository's subdirectory robots file cannot govern the entire `github.io` hostname.
+
+Google Search also handles favicons per hostname, not per subdirectory. The portrait favicon works for this portfolio's browser tabs, but Google Search appearance is not guaranteed. A custom domain or a correctly configured hostname-root site is needed to control the search favicon independently of this GitHub project path. See [Google's favicon guidance](https://developers.google.com/search/docs/appearance/favicon-in-search).
 
 ## Contact form
 
