@@ -8,8 +8,9 @@ A project-first portfolio for Wajih Shaikh: WordPress development, Elementor, Wo
 
 Pure HTML, CSS and vanilla JavaScript. No framework, package manager, build step, Node.js server or application backend is required.
 
-- 18 indexable pages and a custom 404.
+- 19 indexable pages and a custom 404.
 - Five focused service pages.
+- One substantive remote service-area page for Pakistan and international delivery, without implying false offices.
 - Four detailed case studies and 14 real project showcases.
 - Three illustrated WordPress articles.
 - 16 supplied Fiverr reviews in a manual, keyboard/touch-friendly slider.
@@ -29,6 +30,7 @@ There is no `npm install` or build command. Files at the repository root are the
 index.html
 about/                 Developer profile
 services/              Service directory
+remote-wordpress-developer/ Remote service areas and delivery process
 *-development/         Individual development services
 wordpress-*/           Performance and redesign services
 case-studies/          Real work and project details
