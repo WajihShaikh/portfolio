@@ -8,11 +8,11 @@ A project-first portfolio for Wajih Shaikh: WordPress development, Elementor, Wo
 
 Pure HTML, CSS and vanilla JavaScript. No framework, package manager, build step, Node.js server or application backend is required.
 
-- 19 indexable pages and a custom 404.
+- 24 indexable pages and a custom 404.
 - Five focused service pages.
 - One substantive remote service-area page for Pakistan and international delivery, without implying false offices.
 - Four detailed case studies and 14 real project showcases.
-- Three illustrated WordPress articles.
+- Eight illustrated articles covering WordPress, development, AI systems and modern search visibility.
 - 16 supplied Fiverr reviews in a manual, keyboard/touch-friendly slider.
 - Local fonts/icons, responsive layouts and reduced-motion-friendly animation.
 - Per-page metadata, canonical URLs, sitemap and linked JSON-LD entities.

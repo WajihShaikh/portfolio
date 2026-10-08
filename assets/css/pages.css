@@ -102,6 +102,14 @@
 .reading-table td{color:#516680}
 .article-prose .source-note{font-size:12px!important;line-height:1.8!important;color:#516680}
 .article-prose a:not(.button){text-decoration:underline;text-underline-offset:3px}
+.article-prose h3{font-size:20px;line-height:1.35;margin:26px 0 9px;color:#18395f}
+.article-prose ul,.article-prose ol{display:grid;gap:10px;margin:18px 0 28px;padding-left:22px;color:#435b78}
+.article-prose li{padding-left:5px;font-size:15px;line-height:1.75}
+.article-prose li::marker{color:#2f75df;font-weight:600}
+.article-prose .source-list{list-style:none;padding:0;gap:0;border-top:1px solid #dfe7f2}
+.article-prose .source-list li{padding:13px 0;border-bottom:1px solid #dfe7f2}
+.article-prose .source-list a{display:inline-flex;align-items:center;gap:8px;font-size:14px}
+.article-prose .source-list a::after{content:"↗";text-decoration:none}
 .article-prose .reading-checklist{list-style:none;margin:23px 0;padding:0;counter-reset:check}
 .reading-checklist li{position:relative;padding:18px 0 18px 42px;border-top:1px solid #dce5f2;font-size:14px;color:#516680;line-height:1.8;counter-increment:check}
 .reading-checklist li::before{content:counter(check,decimal-leading-zero);position:absolute;left:0;top:20px;font-size:11px;color:#35639e;font-weight:600}
