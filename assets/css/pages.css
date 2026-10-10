@@ -102,7 +102,7 @@
 .reading-table td{color:#516680}
 .article-prose .source-note{font-size:12px!important;line-height:1.8!important;color:#516680}
 .article-prose a:not(.button){text-decoration:underline;text-underline-offset:3px}
-.article-prose h3{font-size:20px;line-height:1.35;margin:26px 0 9px;color:#18395f}
+.article-prose h3{font-size:20px;line-height:1.4;letter-spacing:.005em;margin:28px 0 10px;color:#18395f}
 .article-prose ul,.article-prose ol{display:grid;gap:10px;margin:18px 0 28px;padding-left:22px;color:#435b78}
 .article-prose li{padding-left:5px;font-size:15px;line-height:1.75}
 .article-prose li::marker{color:#2f75df;font-weight:600}
