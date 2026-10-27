@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Critical PHP Security Update for WordPress: What to Do</title>
+<meta name="description" content="Check whether your WordPress or WooCommerce site needs the October 2026 PHP security update, then upgrade safely with this practical checklist.">
+<meta name="author" content="Wajih Shaikh">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#07101f">
+<link rel="canonical" href="https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/">
+<link rel="icon" type="image/jpeg" href="../../assets/images/wajih-shaikh-wordpress-developer.jpg">
+<link rel="preload" href="../../assets/fonts/CalSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/images/blog/wordpress-php-security-update-2026.jpg" as="image" fetchpriority="high">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Critical PHP Security Update for WordPress: What to Do">
+<meta property="og:description" content="A calm, practical guide to checking your PHP version and updating a WordPress or WooCommerce site without unnecessary risk.">
+<meta property="og:url" content="https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/">
+<meta property="og:image" content="https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-php-security-update-2026.jpg">
+<meta property="og:image:alt" content="WordPress and WooCommerce websites connected to an updated PHP server and security shield">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Wajih Shaikh">
+<meta property="article:published_time" content="2026-10-27T12:09:00+05:00">
+<meta property="article:modified_time" content="2026-10-27T12:09:00+05:00">
+<meta property="article:section" content="WordPress security">
+<meta property="article:tag" content="WordPress">
+<meta property="article:tag" content="PHP security">
+<meta property="article:tag" content="WooCommerce">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Critical PHP Security Update for WordPress: What to Do">
+<meta name="twitter:description" content="How to check your server, understand the October 2026 PHP advisory and update WordPress safely.">
+<meta name="twitter:image" content="https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-php-security-update-2026.jpg">
+<meta name="twitter:image:alt" content="WordPress and WooCommerce websites connected to an updated PHP server and security shield">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/#article","headline":"Critical PHP Security Update for WordPress: What Site Owners Should Do","description":"A practical guide to checking and safely updating PHP after the October 2026 critical security release, with specific guidance for WordPress and WooCommerce sites.","datePublished":"2026-10-27T12:09:00+05:00","dateModified":"2026-10-27T12:09:00+05:00","author":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"publisher":{"@id":"https://wajihshaikh.github.io/portfolio/about/#person"},"mainEntityOfPage":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/#page"},"image":{"@type":"ImageObject","url":"https://wajihshaikh.github.io/portfolio/assets/images/blog/wordpress-php-security-update-2026.jpg","width":1200,"height":800},"inLanguage":"en-US","about":["WordPress security","PHP security update","WooCommerce maintenance","PHP compatibility"],"keywords":["WordPress PHP security update","update PHP WordPress safely","WooCommerce PHP requirements","check PHP version WordPress"]},{"@type":"WebPage","@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/#page","url":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/","name":"Critical PHP Security Update for WordPress","description":"Check whether a WordPress or WooCommerce site needs the October 2026 PHP security update and follow a safe upgrade process.","isPartOf":{"@id":"https://wajihshaikh.github.io/portfolio/#website"},"mainEntity":{"@id":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/#article"},"dateModified":"2026-10-27T12:09:00+05:00","inLanguage":"en-US"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wajihshaikh.github.io/portfolio/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://wajihshaikh.github.io/portfolio/blog/"},{"@type":"ListItem","position":3,"name":"PHP Security Update","item":"https://wajihshaikh.github.io/portfolio/blog/wordpress-php-security-update-2026/"}]},{"@type":"Person","@id":"https://wajihshaikh.github.io/portfolio/about/#person","name":"Wajih Shaikh","jobTitle":"Senior WordPress Developer & Web Designer","url":"https://wajihshaikh.github.io/portfolio/about/","image":"https://wajihshaikh.github.io/portfolio/assets/images/wajih-shaikh-wordpress-developer.jpg","sameAs":["https://www.linkedin.com/in/wajihshaikh01/","https://github.com/WajihShaikh","https://www.fiverr.com/wajihshaikh01"]}]}</script>
+</head>
+<body class="modern-pages article-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+<div class="frame nav-shell">
+<a class="wordmark" href="../../index.html" aria-label="Wajih Shaikh home"><span>Wajih</span><span>Shaikh</span></a>
+<nav class="desktop-nav" aria-label="Primary">
+<a href="../../case-studies/index.html">Work</a><a href="../../services/index.html">Services</a><a href="../../about/index.html">About</a><a aria-current="page" href="../index.html">Insights</a><a class="nav-fiverr" href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener"><img src="../../assets/icons/fiverr.svg" alt="Fiverr" width="59" height="20"></a><a class="nav-contact" href="../../contact/index.html">Start a project</a>
+</nav>
+<button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-nav"><span>Menu</span><i></i></button>
+</div>
+<nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile"><a href="../../case-studies/index.html">Work</a><a href="../../services/index.html">Services</a><a href="../../about/index.html">About</a><a href="../index.html">Insights</a><a href="../../contact/index.html">Start a project</a></nav>
+</header>
+<main id="main">
+<article class="article">
+<header class="article-hero">
+<div class="frame article-head">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../index.html">Insights</a><span aria-hidden="true">/</span><span aria-current="page">PHP security update</span></nav>
+<p class="eyebrow">WordPress security</p>
+<div class="article-meta"><img src="../../assets/images/wajih-shaikh-wordpress-developer.jpg" alt="" width="29" height="29"><span>Wajih Shaikh</span><span aria-hidden="true">/</span><time datetime="2026-10-27">27 October 2026</time><span aria-hidden="true">/</span><span>Updated for the current PHP advisory</span></div>
+<h1>Critical PHP Security Update: What WordPress Site Owners Should Do</h1>
+<p>Two critical PHP vulnerabilities were patched in October 2026. Here is how to check your server, understand the real risk and update a WordPress or WooCommerce site safely.</p>
+</div>
+<figure class="article-banner"><img src="../../assets/images/blog/wordpress-php-security-update-2026.jpg" alt="WordPress and WooCommerce websites connected to an updated PHP server and security shield" width="1200" height="800" fetchpriority="high" decoding="async"></figure>
+</header>
+<div class="frame article-layout">
+<aside>
+<span>Written by</span><strong>Wajih Shaikh</strong><p>Senior WordPress Developer &amp; Web Designer</p>
+<nav class="article-toc" aria-label="Article contents"><span>In this article</span><a href="#what-happened">What happened</a><a href="#check-version">Check your PHP version</a><a href="#versions">Versions to use</a><a href="#upgrade">Safe update process</a><a href="#woocommerce">WooCommerce checklist</a><a href="#questions">Common questions</a></nav>
+</aside>
+<div class="article-prose">
+<div class="article-answer"><p><strong>Quick answer:</strong> Check the PHP version used by your web server and confirm with your host that it includes the 21 October 2026 security fixes. The patched upstream releases are PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12. Updating WordPress, WooCommerce or plugins alone does not patch the PHP runtime. Back up the site and test compatibility on staging before changing the production version.</p></div>
+
+<section id="what-happened">
+<h2>What happened in the October 2026 PHP security release?</h2>
+<p>On 21 October 2026, the PHP project released fixes for two critical vulnerabilities that could allow unauthenticated remote code execution in affected PHP installations. The PHP project advised users to update immediately. WordPress and WooCommerce published their own notices because both platforms run on PHP.</p>
+<p>This is a server-runtime issue, not a vulnerability in WordPress core or WooCommerce. That distinction matters. A normal WordPress plugin update will not replace the PHP version installed by a hosting provider.</p>
+<p>The official patched releases are PHP 8.2.35, PHP 8.3.36, PHP 8.4.27 and PHP 8.5.12. A host may also provide a vendor-maintained package or backported patch, so ask for confirmation rather than judging safety from the displayed version number alone.</p>
+<div class="article-takeaway"><strong>Do not assume the worst</strong><p>An older version number is a reason to investigate. It is not proof that a website has been attacked or compromised. Confirm the server package, review hosting notices and check logs if there is a specific concern.</p></div>
+</section>
+
+<section id="check-version">
+<h2>How do I check the PHP version in WordPress?</h2>
+<ol class="reading-checklist">
+<li><strong>Open Site Health.</strong> In the WordPress dashboard, go to Tools, then Site Health.</li>
+<li><strong>Open the Info tab.</strong> Expand the Server section and find the PHP version field.</li>
+<li><strong>Check the hosting panel.</strong> cPanel, Plesk and managed hosting dashboards often show the active PHP version too.</li>
+<li><strong>Ask the host about the security patch.</strong> If the number is unclear or managed by the provider, request written confirmation that the October 2026 PHP security fixes are applied.</li>
+</ol>
+<p>WooCommerce store owners can also go to WooCommerce, then Status, and look under Server environment. Record the PHP version before making changes so you have a clear rollback reference.</p>
+</section>
+
+<section id="versions">
+<h2>Which PHP version should a WordPress site use?</h2>
+<div class="reading-table-wrap">
+<table class="reading-table">
+<caption>PHP status and practical action as of 27 October 2026</caption>
+<thead><tr><th scope="col">PHP branch</th><th scope="col">Upstream status</th><th scope="col">Practical action</th></tr></thead>
+<tbody>
+<tr><th scope="row">8.5</th><td>Actively supported</td><td>Use 8.5.12 or a confirmed patched host package, after compatibility testing.</td></tr>
+<tr><th scope="row">8.4</th><td>Actively supported</td><td>Use 8.4.27 or a confirmed patched host package.</td></tr>
+<tr><th scope="row">8.3</th><td>Security support</td><td>Use 8.3.36 or a confirmed patched host package. WooCommerce recommends PHP 8.3 or newer.</td></tr>
+<tr><th scope="row">8.2</th><td>Security support ends 31 December 2026</td><td>Use 8.2.35 only as a short-term supported path, then plan the next upgrade.</td></tr>
+<tr><th scope="row">8.1 or older</th><td>End of upstream support</td><td>Plan a tested move to a supported branch. A host may backport fixes, but that support must be verified.</td></tr>
+</tbody>
+</table>
+</div>
+<p class="source-note">Version support dates come from the PHP project. Hosting vendors sometimes maintain packages differently, which is why the right question is whether the installed package contains the security fix.</p>
+</section>
+
+<section id="upgrade">
+<h2>How do you update PHP without breaking WordPress?</h2>
+<p>The PHP switch itself may take only a few clicks. The important work happens before and after it. Old plugins, abandoned themes and custom code can depend on behavior that changed in newer PHP versions.</p>
+<ol class="reading-checklist">
+<li><strong>Confirm who controls PHP.</strong> On shared or managed hosting, the provider may already have patched the server. On a VPS or dedicated server, responsibility may sit with you or a server administrator.</li>
+<li><strong>Create a restorable backup.</strong> Include the database, uploads, themes, plugins and server configuration. A backup is useful only if you know how to restore it.</li>
+<li><strong>Update the application layer.</strong> Bring WordPress core, actively maintained plugins and the theme to compatible releases before the PHP change.</li>
+<li><strong>Clone the site to staging.</strong> Test the exact target PHP branch with a recent copy of the production website.</li>
+<li><strong>Review logs, not only screens.</strong> Check PHP errors, WordPress debug logs, failed scheduled actions and browser-console errors.</li>
+<li><strong>Test the business journeys.</strong> Submit forms, sign in, search, upload media and exercise any custom post types or API integrations.</li>
+<li><strong>Plan the production window.</strong> Choose a low-traffic period, keep rollback access ready and avoid changing unrelated systems at the same time.</li>
+<li><strong>Verify after the switch.</strong> Clear caches, confirm the active PHP version and repeat the critical tests on production.</li>
+</ol>
+<p>A compatibility scanner can help identify suspicious code, but it cannot prove that every runtime path works. Real staging tests remain necessary.</p>
+</section>
+
+<section id="woocommerce">
+<h2>What should WooCommerce stores test after a PHP update?</h2>
+<p>A store needs a wider test than a brochure website because a small server-side failure can interrupt revenue, fulfilment or customer communication.</p>
+<ul>
+<li>Add simple and variable products to the cart.</li>
+<li>Test guest and account-based checkout.</li>
+<li>Run test transactions for each active payment gateway.</li>
+<li>Confirm shipping rates, tax calculations and coupon rules.</li>
+<li>Check order emails and status changes.</li>
+<li>Review webhooks, API integrations and scheduled actions.</li>
+<li>Test subscriptions, bookings or memberships if the store uses them.</li>
+<li>Review server logs after the tests, even when the storefront looks correct.</li>
+</ul>
+<h3>WooCommerce 11.6 changes the minimum PHP requirement</h3>
+<p>WooCommerce 11.6 is planned for February 2027 and will require PHP 8.1 or newer. WooCommerce currently recommends PHP 8.3 or newer for an updated hosting environment. PHP 8.1 satisfies the planned WooCommerce minimum, but it has already reached the end of upstream PHP security support. For a new upgrade plan, a supported branch that works with the site is the more sensible target.</p>
+<p>Stores using PHP 7.4 or 8.0 can remain on WooCommerce 11.5 temporarily while resolving hosting or extension constraints. That should be treated as transition time, not a long-term security plan.</p>
+</section>
+
+<section id="questions">
+<h2>Common questions about the WordPress PHP security update</h2>
+<h3>Does updating WordPress fix the PHP vulnerabilities?</h3>
+<p>No. WordPress runs on PHP, but PHP is installed at the server level. Your host or server administrator must apply the relevant PHP package update.</p>
+<h3>Has my WordPress site already been hacked?</h3>
+<p>The advisory does not prove that any individual site was compromised. If you have suspicious activity, unexplained files, unfamiliar administrators or server alerts, preserve evidence and arrange a focused security investigation.</p>
+<h3>Can I update PHP directly on a live site?</h3>
+<p>You can, but it creates avoidable risk. A staging test gives you time to find theme, plugin and custom-code incompatibilities before customers encounter them.</p>
+<h3>Should I choose PHP 8.5 because it is newest?</h3>
+<p>Not automatically. Use a currently supported and patched branch that your host, WordPress stack and business-critical extensions support. WooCommerce recommends PHP 8.3 or newer, but the exact target should be tested against the specific site.</p>
+<h3>What if my hosting company cannot update PHP?</h3>
+<p>Ask for the provider's patch status and migration options. If it cannot supply a supported or securely maintained environment, plan a controlled move to suitable hosting. Export backups and document DNS, email, cron jobs and integrations before migrating.</p>
+</section>
+
+<section>
+<h2>A calm response is better than a rushed one</h2>
+<p>The right response is prompt, but it should still be controlled. Confirm the server status, create a usable backup, test the target version and verify the website's real workflows. That is more reliable than installing random security plugins or changing several systems at once.</p>
+<p>If your site also needs a broader technical review, see my <a href="../wordpress-performance-audit/index.html">WordPress performance audit process</a>, <a href="../../wordpress-development/index.html">WordPress development service</a> and <a href="../../woocommerce-development/index.html">WooCommerce development service</a>.</p>
+<h2>Official sources</h2>
+<ul class="source-list">
+<li><a href="https://www.php.net/archive/2026.php#2026-10-21-5" target="_blank" rel="noopener">PHP project security advisory and patched releases</a></li>
+<li><a href="https://www.php.net/supported-versions.php" target="_blank" rel="noopener">PHP supported versions</a></li>
+<li><a href="https://wordpress.org/news/2026/10/critical-php-security-release/" target="_blank" rel="noopener">WordPress critical PHP security notice</a></li>
+<li><a href="https://developer.woocommerce.com/2026/10/21/php-security-release/" target="_blank" rel="noopener">WooCommerce critical PHP security advisory</a></li>
+<li><a href="https://developer.woocommerce.com/2026/09/29/php-8-1-requirement/" target="_blank" rel="noopener">WooCommerce 11.6 PHP 8.1 requirement</a></li>
+<li><a href="https://wordpress.org/documentation/site-health/" target="_blank" rel="noopener">WordPress Site Health documentation</a></li>
+</ul>
+</section>
+
+<div class="article-takeaway"><strong>The practical takeaway</strong><p>Confirm that your server includes the October 2026 PHP fixes. If a version change is required, back up first, test on staging, verify every critical workflow and keep a rollback path ready.</p></div>
+<nav class="article-next" aria-label="Related reading"><a href="../wordpress-7-2-features-upgrade-guide/index.html">Prepare for WordPress 7.2 ↗</a><a href="../wordpress-performance-audit/index.html">Review site performance ↗</a><a href="../index.html">More development notes ↗</a></nav>
+</div>
+</div>
+</article>
+<section class="closing"><div class="frame closing-grid"><p class="eyebrow">Need a compatibility review?</p><h2>Update the server without gambling on the website.</h2><div><p>I can review the current PHP environment, test the site on staging and verify WordPress or WooCommerce workflows before production changes.</p><a class="button button-light" href="../../contact/index.html">Request a PHP compatibility review</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="frame footer-grid"><div><a class="footer-name" href="../../index.html">Wajih Shaikh</a><p>Senior WordPress Developer &amp; Web Designer<br>based in Hyderabad, Pakistan.</p></div><div><span class="footer-label">Explore</span><a href="../../services/index.html">Services</a><a href="../../case-studies/index.html">Case studies</a><a href="../../remote-wordpress-developer/index.html">Service areas</a><a href="../../about/index.html">About</a><a href="../index.html">Insights</a></div><div><span class="footer-label">Connect</span><a href="mailto:shaikhwajih54@gmail.com">shaikhwajih54@gmail.com</a><a href="https://www.linkedin.com/in/wajihshaikh01/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/WajihShaikh" target="_blank" rel="noopener">GitHub</a><a class="footer-fiverr" href="https://www.fiverr.com/wajihshaikh01" target="_blank" rel="noopener"><img src="../../assets/icons/fiverr.svg" alt="" width="52" height="18"><span>Hire me on Fiverr ↗</span></a></div></div><div class="frame footer-base"><span>© <span data-year></span> Wajih Shaikh</span><span>Remote WordPress development for international clients</span></div></footer>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>
